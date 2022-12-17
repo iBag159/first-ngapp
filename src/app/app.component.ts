@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Product } from './models/product.model';
 
 interface User {
   name: string,
@@ -35,20 +34,6 @@ export class AppComponent {
     }
   ]
 
-  products: Product[] = [
-    {
-      title: "Product 1",
-      description: "A beautiful product",
-      image: "assets/images/avatar.png",
-      price: "$12.00"
-    },
-    {
-      title: "Product 2",
-      description: "A beautiful product",
-      image: "assets/images/avatar.png",
-      price: "$12.00"
-    },
-  ]
   changeTitle() {
     this.title = this.title === this.title1 ? this.title2 : this.title1;
   }
