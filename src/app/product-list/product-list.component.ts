@@ -9,13 +9,22 @@ export class ProductListComponent implements OnInit {
 
   products: Product[] = [
     {
+      id: 1,
       title: "Product 1",
       description: "A beautiful product",
       image: "assets/images/avatar.png",
       price: "$12.00"
     },
     {
+      id: 2,
       title: "Product 2",
+      description: "A beautiful product",
+      image: "assets/images/avatar.png",
+      price: "$12.00"
+    },
+    {
+      id: 3,
+      title: "Product 3",
       description: "A beautiful product",
       image: "assets/images/avatar.png",
       price: "$12.00"
@@ -27,4 +36,7 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
   }
 
+  onDetailed(id: number) {
+    console.log(id);
+  }
 }

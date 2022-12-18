@@ -1,5 +1,5 @@
-<ul *ngFor="let product of products">
-  <li>
-    <app-product [product]="product"></app-product>
+<ul>
+  <li *ngFor="let product of products">
+    <app-product [product]="product" (detailed)="onDetailed($event)"></app-product>
   </li>
 </ul>
