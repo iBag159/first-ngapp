@@ -1,7 +1,8 @@
 <div>
-  <h3>{{ product.title }}</h3>
-  <small>{{ product.price }}</small>
+  <h3>{{ product.title | reverse }}</h3>
+  <small>{{ product.updated | formatDate: 'Pp' }}</small>
   <p>{{ product.description }}</p>
-  <img [src]="product.description"/>
+  <small>{{ product.price | currency }}</small>
+  <img [src]="product.image"/>
   <button (click)="viewDetails()">View Deatails</button>
 </div>
