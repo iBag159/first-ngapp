@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.email }}
+    <img [src]="user.picture.medium"/>
+  </li>
+</ul>

@@ -1,11 +1,5 @@
 import { Component } from '@angular/core';
 
-interface User {
-  name: string,
-  age: number,
-  isSingle: boolean,
-  avatar: string
-}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,21 +12,6 @@ export class AppComponent {
 
   rockBands = ['Nirvana', 'Los Prisioneros', 'Soda Stereo']
   newRockBand = "";
-
-  users: User[] = [
-    {
-      name: "Gaby",
-      age: 211,
-      isSingle: false,
-      avatar: "assets/images/avatar.png"
-    },
-    {
-      name: "Nathaly",
-      age: 212,
-      isSingle: false,
-      avatar: "assets/images/nathaly-sipiran.jpg"
-    }
-  ]
 
   changeTitle() {
     this.title = this.title === this.title1 ? this.title2 : this.title1;
