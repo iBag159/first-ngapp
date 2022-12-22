@@ -13,6 +13,8 @@ import { ListComponent } from './components/list/list.component';
 import { FibonacciPipe } from './pipes/fibonacci.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
 import { UserListComponent } from './components/user-list/user-list.component';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { TodoComponent } from './components/todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { UserListComponent } from './components/user-list/user-list.component';
     FibonacciPipe,
     HighlightDirective,
     UserListComponent,
+    TodoListComponent,
+    TodoComponent,
   ],
   imports: [
     BrowserModule,

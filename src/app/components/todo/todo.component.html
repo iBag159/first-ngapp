@@ -1,0 +1,6 @@
+<div>
+  <span>{{ todo.id }}</span>
+  <input [(ngModel)]="todo.title"/>
+  <button (click)="delete()">X</button>
+  <button *ngIf="!todo.completed" (click)="update()">👌</button>
+</div>
