@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Todo } from '../models/todo.model';
+import { Todo } from '@todo/models/todo.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class TodoService {
 
   path: string = 'https://jsonplaceholder.typicode.com/todos';

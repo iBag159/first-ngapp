@@ -1,16 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { User } from '../models/user.model';
+import { User } from '@user/models/user.model';
 
 interface ResponseUser {
   results: User[],
   info: any
 }
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
+
 export class UsersService {
 
   constructor(private http: HttpClient) { }

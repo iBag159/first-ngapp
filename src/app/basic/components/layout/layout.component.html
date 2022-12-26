@@ -1,0 +1,28 @@
+
+<h1>
+  Hola Mundo Angular {{ title }}
+  <button (click)="changeTitle()">Change Title</button>
+</h1>
+<br />
+<input type="text" [(ngModel)]="newRockBand" (keydown.enter)="addRockBand()">
+<h2>{{ newRockBand }}</h2>
+<button (click)="addRockBand()">Add Band</button>
+<button (click)="deleteBands()">Remove all</button>
+<ul>
+  <li *ngIf="rockBands.length === 0">No hay bandas</li>
+  <li *ngFor="let rockBand of rockBands; index as i">
+    {{ i + 1 }}. <input value="{{ rockBand }}" (keydown.enter)="edit(i, this.value)"/>
+    <button (click)="deleteABand(i)">😈</button>
+    <button (click)="editABand(i)">✍🏻</button>
+  </li>
+</ul>
+<ul>
+  <li *ngIf="rockBands.length === 0">No hay bandas</li>
+  <li *ngFor="let rockBand of rockBands; index as i">
+    <input value="{{ rockBand }} {{ i }}" />
+  </li>
+</ul>
+<div *ngIf="rockBands.length > 4">
+  Conditional Render
+</div>
+<app-list></app-list>
