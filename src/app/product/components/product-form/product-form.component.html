@@ -1,0 +1,11 @@
+<form action="" novalidate [formGroup]="form" (ngSubmit)="create()">
+  <input type="text" formControlName="title">
+  <p *ngIf="titleField.errors && titleField.dirty">
+    <small *ngIf="titleField.hasError('required')">This field is required.</small>
+    <small *ngIf="titleField.hasError('minlength')">This field must be 10 characters at least.</small>
+  </p>
+  <input type="file" formControlName="image">
+  <input type="number" formControlName="price">
+  <textarea type="text" formControlName="description"></textarea>
+  <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>

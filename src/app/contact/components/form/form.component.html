@@ -1,0 +1,14 @@
+<input type="text" [formControl]="emailField" >
+<button [disabled]="emailField.invalid">Enviar</button>
+<p *ngIf="emailField.errors && emailField.dirty">
+  <small *ngIf="emailField.hasError('required')">This field is required.</small>
+  <small *ngIf="emailField.hasError('minlength')">This field must be at least 5 characters.</small>
+  <small *ngIf="emailField.hasError('email')">This field must be a valid email</small>
+</p>
+<br />
+<input type="number" [formControl]="ageField" >
+<button [disabled]="ageField.invalid">Enviar</button>
+<p *ngIf="ageField.errors && ageField.dirty">
+  <small *ngIf="ageField.hasError('required')">This field is required.</small>
+  <small *ngIf="ageField.hasError('ischild')">You must be 18 or older.</small>
+</p>

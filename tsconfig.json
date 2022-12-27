@@ -25,6 +25,7 @@
       "@todo/*": ["src/app/todo/*"],
       "@user/*": ["src/app/user/*"],
       "@product/*": ["src/app/product/*"],
+      "@utils/*": ["src/app/utils/*"],
     }
   },
   "angularCompilerOptions": {

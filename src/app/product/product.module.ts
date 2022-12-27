@@ -10,6 +10,8 @@ import { ReversePipe } from '@shared/pipes/reverse.pipe';
 import { FormatDatePipe } from '@shared/pipes/format-date.pipe';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductService } from '@product/services/product.service';
+import { ProductFormComponent } from './components/product-form/product-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { ProductService } from '@product/services/product.service';
     ProductListComponent,
     ReversePipe,
     FormatDatePipe,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductFormComponent
   ],
   imports: [
     CommonModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     ProductService
