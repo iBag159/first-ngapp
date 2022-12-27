@@ -8,17 +8,23 @@ import { ProductListComponent } from '@product/components/product-list/product-l
 
 import { ReversePipe } from '@shared/pipes/reverse.pipe';
 import { FormatDatePipe } from '@shared/pipes/format-date.pipe';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ProductService } from '@product/services/product.service';
 
 @NgModule({
   declarations: [
     ProductComponent,
     ProductListComponent,
     ReversePipe,
-    FormatDatePipe
+    FormatDatePipe,
+    ProductDetailComponent
   ],
   imports: [
     CommonModule,
     ProductRoutingModule
+  ],
+  providers: [
+    ProductService
   ]
 })
 export class ProductModule { }
