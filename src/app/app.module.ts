@@ -5,10 +5,12 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { E404Component } from './errors/e404/e404.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    E404Component,
   ],
   imports: [
     BrowserModule,
