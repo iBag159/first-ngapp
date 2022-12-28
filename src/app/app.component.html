@@ -1,21 +1,11 @@
-<nav>
-  <ul>
-    <li>
-      <a routerLink="/basic/layout">Basic</a>
-    </li>
-    <li>
-      <a routerLink="/todos/all">Todos</a>
-    </li>
-    <li>
-      <a routerLink="/users/all">Users</a>
-    </li>
-    <li>
-      <a routerLink="/products/all">Products</a>
-    </li>
-    <li>
-      <a routerLink="/contact">Contact</a>
-    </li>
-  </ul>
-</nav>
+<mat-toolbar>
+  <nav>
+    <a mat-button matTooltip="Basic Module" routerLink="/basic/layout">Basic</a>
+    <a mat-button matTooltip="Todos Module" routerLink="/todos/all">Todos</a>
+    <a mat-button matTooltip="User Module" routerLink="/users/all">Users</a>
+    <a mat-button matTooltip="Products Module" routerLink="/products/all">Products</a>
+    <a mat-button matTooltip="Contact Module" routerLink="/contact">Contact</a>
+  </nav>
+</mat-toolbar>
 
 <router-outlet></router-outlet>

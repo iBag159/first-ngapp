@@ -1,31 +1,31 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { ProductRoutingModule } from './product-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '@material/material.module';
+import { SharedModule } from '@shared/shared.module';
 
+import { ProductService } from './services/product.service';
 import { ProductComponent } from '@product/components/product/product.component';
 import { ProductListComponent } from '@product/components/product-list/product-list.component';
-
-import { ReversePipe } from '@shared/pipes/reverse.pipe';
-import { FormatDatePipe } from '@shared/pipes/format-date.pipe';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { ProductService } from '@product/services/product.service';
 import { ProductFormComponent } from './components/product-form/product-form.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ProductFormAltComponent } from './components/product-form-alt/product-form-alt.component';
 
 @NgModule({
   declarations: [
     ProductComponent,
     ProductListComponent,
-    ReversePipe,
-    FormatDatePipe,
     ProductDetailComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    ProductFormAltComponent
   ],
   imports: [
     CommonModule,
     ProductRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule,
+    MaterialModule,
   ],
   providers: [
     ProductService

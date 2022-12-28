@@ -1,8 +1,14 @@
-<div>
-  <h3>{{ product.title | reverse }}</h3>
-  <small>{{ product.updated | formatDate: 'Pp' }}</small>
-  <p>{{ product.description }}</p>
-  <small>{{ product.price | currency }}</small>
-  <img [src]="product.image"/>
-  <a [routerLink]="['/products', product.id]">View Deatails</a>
-</div>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ product.title | reverse }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="product.image" [alt]="product.title"/>
+  <mat-card-content>
+    <small>{{ product.updated | formatDate: 'Pp' }}</small>
+    <p>{{ product.description }}</p>
+    <small>{{ product.price | currency }}</small>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-flat-button color="primary" [routerLink]="['/products', product.id]">View Deatails</a>
+  </mat-card-actions>
+</mat-card>

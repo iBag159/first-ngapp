@@ -1,11 +1,26 @@
-<form action="" novalidate [formGroup]="form" (ngSubmit)="create()">
-  <input type="text" formControlName="title">
-  <p *ngIf="titleField.errors && titleField.dirty">
-    <small *ngIf="titleField.hasError('required')">This field is required.</small>
-    <small *ngIf="titleField.hasError('minlength')">This field must be 10 characters at least.</small>
-  </p>
-  <input type="file" formControlName="image">
-  <input type="number" formControlName="price">
-  <textarea type="text" formControlName="description"></textarea>
-  <button type="submit" [disabled]="form.invalid">Submit</button>
-</form>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Create a new product</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form action="" novalidate [formGroup]="form" (ngSubmit)="create()">
+      <mat-form-field>
+        <input matInput type="text" formControlName="title" placeholder="Type the title">
+      </mat-form-field>
+      <p *ngIf="titleField.errors && titleField.dirty">
+        <small *ngIf="titleField.hasError('required')">This field is required.</small>
+        <small *ngIf="titleField.hasError('minlength')">This field must be 10 characters at least.</small>
+      </p>
+      <input type="file" formControlName="image">
+      <mat-form-field>
+        <input matInput type="number" formControlName="price">
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput type="text" formControlName="description" placeholder="Type a beautiful description"></textarea>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="primary" type="submit" [disabled]="form.invalid">Submit</button>
+  </mat-card-actions>
+</mat-card>

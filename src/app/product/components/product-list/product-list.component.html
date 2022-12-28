@@ -1,3 +1,5 @@
+<a mat-flat-button color="primary" routerLink="/products/create">Create</a>
+<a mat-flat-button color="accent" routerLink="/products/create-alt">Create Alt</a>
 <ul class="products">
   <li *ngFor="let product of products">
     <app-product [product]="product" (detailed)="onDetailed($event)"></app-product>

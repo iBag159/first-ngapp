@@ -6,18 +6,17 @@ import { BasicRoutingModule } from './basic-routing.module';
 import { LayoutComponent } from '@basic/components/layout/layout.component';
 import { ListComponent } from '@basic/components/list/list.component';
 
-import { FibonacciPipe } from '@shared/pipes/fibonacci.pipe';
-
+import { SharedModule } from '@shared/shared.module';
 @NgModule({
   declarations: [
     LayoutComponent,
     ListComponent,
-    FibonacciPipe
   ],
   imports: [
     CommonModule,
     FormsModule,
-    BasicRoutingModule
+    BasicRoutingModule,
+    SharedModule
   ]
 })
 export class BasicModule { }
