@@ -9,7 +9,6 @@ import { ProductService } from './services/product.service';
 import { ProductComponent } from '@product/components/product/product.component';
 import { ProductListComponent } from '@product/components/product-list/product-list.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ProductFormAltComponent } from './components/product-form-alt/product-form-alt.component';
 
 @NgModule({
@@ -17,7 +16,6 @@ import { ProductFormAltComponent } from './components/product-form-alt/product-f
     ProductComponent,
     ProductListComponent,
     ProductDetailComponent,
-    ProductFormComponent,
     ProductFormAltComponent
   ],
   imports: [

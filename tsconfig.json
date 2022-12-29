@@ -21,12 +21,12 @@
     "paths": {
       "@core/*": ["src/app/core/*"],
       "@shared/*": ["src/app/shared/*"],
-      "@basic/*": ["src/app/basic/*"],
-      "@todo/*": ["src/app/todo/*"],
-      "@user/*": ["src/app/user/*"],
-      "@product/*": ["src/app/product/*"],
       "@utils/*": ["src/app/utils/*"],
       "@material/*": ["src/app/material/*"],
+      "@basic/*": ["src/app/website/basic/*"],
+      "@todo/*": ["src/app/website/todo/*"],
+      "@user/*": ["src/app/website/user/*"],
+      "@product/*": ["src/app/website/product/*"],
     }
   },
   "angularCompilerOptions": {

@@ -6,28 +6,11 @@ import { E404Component } from './errors/e404/e404.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'products/all',
-    pathMatch: 'full'
+    loadChildren: () => import('./website/website.module').then(m => m.WebsiteModule)
   },
   {
-    path: 'basic',
-    loadChildren: () => import('./basic/basic.module').then(m => m.BasicModule)
-  },
-  {
-    path: 'todos',
-    loadChildren: () => import('./todo/todo.module').then(m => m.TodoModule)
-  },
-  {
-    path: 'users',
-    loadChildren: () => import('./user/user.module').then(m => m.UserModule)
-  },
-  {
-    path: 'products',
-    loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
-  },
-  {
-    path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+    path: 'cms',
+    loadChildren: () => import('./cms/cms.module').then(m => m.CmsModule)
   },
   {
     path: '**',

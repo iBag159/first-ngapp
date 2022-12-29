@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatCardModule, MatButtonModule, MatToolbarModule, MatTooltipModule, MatInputModule, MatRadioModule, MatSelectModule } from '@angular/material';
+import { MatCardModule, MatButtonModule, MatToolbarModule, MatTooltipModule, MatInputModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatMenuModule } from '@angular/material';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [],
@@ -12,7 +13,13 @@ import { MatCardModule, MatButtonModule, MatToolbarModule, MatTooltipModule, Mat
     MatTooltipModule,
     MatInputModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    LayoutModule,
+    MatGridListModule,
+    MatMenuModule
   ],
   exports: [
     MatCardModule,
@@ -21,7 +28,13 @@ import { MatCardModule, MatButtonModule, MatToolbarModule, MatTooltipModule, Mat
     MatTooltipModule,
     MatInputModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    LayoutModule,
+    MatGridListModule,
+    MatMenuModule
   ]
 })
 export class MaterialModule { }
